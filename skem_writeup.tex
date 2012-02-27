@@ -39,11 +39,19 @@ where the last approximation consists in considering small ellipsometric angles 
 
 \subsection{Camera system?}
 
+\subsection{Noise analysis}
+
 \section{Excitation}
-A sinusoidal microwave field of frequency $f_{ex}$ sent through a loop or microstrip antenna generates an excitation field $h_{ex}$ which excites the magnetization of the sample. An oven-controlled crystal oscillator generates a highly-stabilized 10 MHz reference signal, which acts as a reference to generate both the sinusoidal microwave field, as well as a 76 MHz signal used to phaselock the pulses to the CW microwave signal. To achieve phaselocking, the microwave frequency must be a multiple of both the laser repetition rate and the reference frequency, i.e. an integer multiple of 3.8 GHz. To improve the signal-to-noise ratio, we apply the microwave pulses for 150 $\mu$s at a repetition frequency of 3 kHz so that a lock-in amplifier extracts this frequency component from the photoinduced current.
+s[kf]em constitutes a modification of standard TR-MOKE techniques. In TR-MOKE, an impulse field excites the system and the magnetization response is measured by means of MOKE. Applying a Fourier transform to the recorded response enables one to map the frequency response of the system.
+
+In S[KF]EM, the excitation field is sinusoidal. Synchronization between the laser pulse and excitation enables recording the magnetization response over an entire period of the excitation. 
+
+A sinusoidal microwave field of frequency $f_{ex}$ sent through a loop or microstrip antenna generates the excitation field $h_{ex}$. An oven-controlled crystal oscillator generates a highly-stabilized 10 MHz reference signal, which acts as a reference to generate both the sinusoidal microwave field, as well as a 76 MHz signal used to phaselock the pulses to the CW microwave signal. To achieve phaselocking, the microwave frequency must be a multiple of both the laser repetition rate and the reference frequency, i.e. an integer multiple of 380 MHz. To improve the signal-to-noise ratio, we apply the microwave pulses for 150 $\mu$s at a repetition frequency of 3 kHz and a lock-in amplifier extracts this frequency component from the photoinduced current.
 
 \subsection{Synchronization}
 The principle of excitation/detection is based on stroboscopic imaging.
+
+\subsection{Phase modulation}
 
 \subsection{Lock-in detection}
 Optical chopper, polarization modulation, electronic chopping.
@@ -52,7 +60,7 @@ Optical chopper, polarization modulation, electronic chopping.
 
 \subsection{Stage}
 
-\subsection{LabView}
+\subsection{LabView/Stabilization}
 
 %We detect the magnetization dynamics by stroboscopic imaging via the magneto-optical Faraday effect synchronized with the microwave field. 
 %The approach used in the current study is very similar to that reported in Refs. 8 and 18. 
