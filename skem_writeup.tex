@@ -6,15 +6,15 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-the s[kf]em setup.
+The s[kf]em setup consists (1) of an optical apparatus, which generates the magneto-optical Kerr signal (2) an electrical apparatus, which synchronizes probe and pump pulses (3) a modulation configuration to facilitate measurement with a lock-in amplifier and (4) a photodiode detector, which produces a photo-induced current containing the information about the sample magnetization. The setup components are discussed here in detail. 
 \end{abstract}
 \section{Overview}
-A description of the magnetometer necessary for the interpretation of experimental results is presented.\cite{SKEM_Tamaru, SKEM_Back}
+A description of the magnetometer necessary for the interpretation of experimental results is presented.\cite{SKEM_Tamaru, SKEM_Back} In Experiment 1, the transmitted light is analyzed and the out-of-plane magnetization is mapped via the Faraday effect. In Experiment 2, the reflected light is analyzed and the out-of-plane magnetization is mapped via the polar Kerr effect.
 \section{Optical system}
 The optical system consists of a second-harmonic generator, a beam expander and diaphragm, a beamsplitter, an oil-immersion objective lens, the sample, an optical retarder, a Wollaston prism, and two photodiodes.
 
 \subsection{Laser}
-A Ti:Sapphire laser, a Mira 900 from Coherent Inc., produces pulses of duration X, energy Y, central wavelength Z, and spectral width ZZ. The beam is polarized and modelled as monochromatic.
+A Ti:Sapphire laser, a Mira 900 from Coherent Inc., produces pulses of duration X, energy Y, central wavelength Z, and spectral width ZZ. The beam is s-polarized and modelled as monochromatic.
 
 \subsection{Second-harmonic generator}
 Halves wavelength, preserves polarization.
@@ -25,7 +25,7 @@ Beam expander and diaphragm.
 \subsection{Detector}
 Wollaston prism, two balanced photodiodes, differential amplifier.
 
-\subsection{Polarization analysis}
+\subsection{Kerr signal}
 We aim to measure the change in the beam's polarization upon reflection from the sample. In our case, the angle of incidence is $\theta = 0$, therefore, the polar Kerr effect produces a change in polarization and ellipticity of the beam, proportional to the out-of-plane magnetization.
 
 We can use the formalism of Jones' matrices to calculate the change of polarization and ellipticity upon reflection from the sample (see Appendix A). In the end, we arrive at a formula for the differential intensity detected at the photodiodes, our measured signal.
@@ -44,9 +44,13 @@ where the last approximation consists in considering small ellipsometric angles 
 \section{Excitation}
 s[kf]em constitutes a modification of standard TR-MOKE techniques. In TR-MOKE, an impulse field excites the system and the magnetization response is measured by means of MOKE. Applying a Fourier transform to the recorded response enables one to map the frequency response of the system.
 
-In S[KF]EM, the excitation field is sinusoidal. Synchronization between the laser pulse and excitation enables recording the magnetization response over an entire period of the excitation. 
+time resolution tr-moke, frequency resolution, srfmr-skem.
 
-A sinusoidal microwave field of frequency $f_{ex}$ sent through a loop or microstrip antenna generates the excitation field $h_{ex}$. An oven-controlled crystal oscillator generates a highly-stabilized 10 MHz reference signal, which acts as a reference to generate both the sinusoidal microwave field, as well as a 76 MHz signal used to phaselock the pulses to the CW microwave signal. To achieve phaselocking, the microwave frequency must be a multiple of both the laser repetition rate and the reference frequency, i.e. an integer multiple of 380 MHz. To improve the signal-to-noise ratio, we apply the microwave pulses for 150 $\mu$s at a repetition frequency of 3 kHz and a lock-in amplifier extracts this frequency component from the photoinduced current.
+In s[kf]em, the excitation field is sinusoidal. Synchronization between the laser pulse and excitation enables recording the magnetization response over an entire period of the excitation. 
+
+In Experiment 1, A sinusoidal microwave field of frequency $f_{ex}$ sent through a loop or microstrip antenna generates the excitation field $h_{ex}$. An oven-controlled crystal oscillator generates a highly-stabilized 10 MHz reference signal, which acts as a reference to generate both the sinusoidal microwave field, as well as a 76 MHz signal used to phaselock the pulses to the CW microwave signal. To achieve phaselocking, the microwave frequency must be a multiple of both the laser repetition rate and the reference frequency, i.e. an integer multiple of 380 MHz. To improve the signal-to-noise ratio, we apply the microwave pulses for 150 $\mu$s at a repetition frequency of 3 kHz and a lock-in amplifier extracts this frequency component from the photoinduced current.
+
+In Experiment 2, A sinusoidal microwave field of frequency $f_{ex}$ sent through a loop or microstrip antenna generates the excitation field $h_{ex}$. An oven-controlled crystal oscillator generates a highly-stabilized 10 MHz reference signal, which acts as a reference to generate the sinusoidal microwave field, as well as an 80 MHz signal used to phaselock the pulses to the CW microwave signal. To achieve phaselocking, the microwave frequency must be a multiple of both the laser repetition rate and the reference frequency, i.e. an integer multiple of 80 MHz. To improve the signal-to-noise ratio, we apply the microwave pulses for 150 $\mu$s at a repetition frequency of 3 kHz and a lock-in amplifier extracts this frequency component from the photoinduced current.
 
 \subsection{Synchronization}
 The principle of excitation/detection is based on stroboscopic imaging.
@@ -61,6 +65,8 @@ Optical chopper, polarization modulation, electronic chopping.
 \subsection{Stage}
 
 \subsection{LabView/Stabilization}
+
+\section{Exemplary Measurements}
 
 %We detect the magnetization dynamics by stroboscopic imaging via the magneto-optical Faraday effect synchronized with the microwave field. 
 %The approach used in the current study is very similar to that reported in Refs. 8 and 18. 
